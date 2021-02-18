@@ -83,6 +83,9 @@
 						<div class="btncontainer col-lg-12">
 							<button class="btn btn-success" disabled="true" id="button">Repeat</button>
 						</div>
+						<div class="col-lg-12">
+							<p id="last"></p>
+						</div>
 					</div>
 				</div>
                 
@@ -90,7 +93,7 @@
 			
 			<footer>
 				<div class="container">
-					<p>&copy; Danilo Ulf Mattick &mdash; All rights reserved!
+					<p>&copy; Danilo Ulf Mattick &mdash; All rights reserved! &mdash; <a href="https://github.com/daniloulf/sds">fork it</a>
 				</div>
 			</footer>
             

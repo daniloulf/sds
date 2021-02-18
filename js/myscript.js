@@ -3,13 +3,24 @@ function getRandomInt(max) {
 	return Math.floor(Math.random() * Math.floor(max)) + 1;
 }
 
+var hasValue = true;
+var last = new Array();
+
 /*form changes events*/
 $(document).change(function() {
 
 	var value = writeSelection();
 	
-	$('button').attr('disabled', false);
+	last.push(value);
+	
 	$('#show').html(value);
+	$('#last').html(last);
+	
+	if (hasValue == true) {
+		$('button').attr('disabled', false);
+	} else {
+		$('button').attr('disabled', true);
+	}
 	
 });
 
@@ -19,7 +30,9 @@ $(document).ready(function() {
 	$('#button').click(function() {
 		
 		value = writeSelection();
+		last.push(value);
 		$('#show').html(value);
+		$('#last').html(last);
 		
 	});
 	
@@ -69,38 +82,39 @@ function writeSelection() {
 	switch (value) {
 		case 'all':
 			value = [
-						'<p>1W4: <strong>' + dice1w4() + '</strong></p>', 
-						'<p>1W6: <strong>' + dice1w6() + '</strong></p>', 
-						'<p>1W8: <strong>' + dice1w8() + '</strong></p>', 
-						'<p>1W10: <strong>' + dice1w10() + '</strong></p>', 
-						'<p>1W12: <strong>' + dice1w12() + '</strong></p>', 
-						'<p>1W20: <strong>' + dice1w20() + '</strong></p>', 
-						'<p>Percent: <strong>' + dicepercent() + '</strong></p>'
+						'4 eyes: <strong>' + dice1w4() + '</strong>\n', 
+						'6 eyes: <strong>' + dice1w6() + '</strong>\n', 
+						'8 eyes: <strong>' + dice1w8() + '</strong>\n', 
+						'10 eyes: <strong>' + dice1w10() + '</strong>\n', 
+						'12 eyes: <strong>' + dice1w12() + '</strong>\n', 
+						'20 eyes: <strong>' + dice1w20() + '</strong>\n', 
+						'Percent: <strong>' + dicepercent() + '</strong>\n'
 					];
 			break;
 		case '4eyes':
-			value = dice1w4();
+			value = '4 eyes: <strong>' + dice1w4() + '</strong>\n' ;
 			break;
 		case '6eyes':
-			value = dice1w6();
+			value = '6 eyes: <strong>' + dice1w6() + '</strong>\n';
 			break;
 		case '8eyes':
-			value = dice1w8();
+			value = '8 eyes: <strong>' + dice1w8() + '</strong>\n';
 			break;
 		case '10eyes':
-			value = dice1w10();
+			value = '10 eyes: <strong>' + dice1w10() + '</strong>\n';
 			break;
 		case '12eyes':
-			value = dice1w12();
+			value = '12 eyes: <strong>' + dice1w12() + '</strong>\n';
 			break;
 		case '20eyes':
-			value = dice1w20();
+			value = '20 eyes: <strong>' + dice1w20() + '</strong>\n';
 			break;
 		case 'percent':
-			value = dicepercent();
+			value = 'Percent: <strong>' + dicepercent() + '</strong>\n';
 			break;
 		default:
-			value = 'No Eyes selected!';
+			hasValue = false;
+			value = hasValue;
 			break;
 	}
 	

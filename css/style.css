@@ -6,6 +6,17 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Truculenta', sans-serif;
 }
 
+a {
+	text-decoration: none;
+	color: green;
+	letter-spacing: 0.25em;
+}
+
+a:hover {
+	text-decoration: none;
+	color: lime;
+}
+
 header h1 {
 	font-size: 5em;
 	text-align:center;
@@ -25,6 +36,10 @@ select {
 	text-align: center;
 	font-size: 5em;
 	
+}
+
+#last {
+	margin-top: 25px;
 }
 
 .btncontainer {
