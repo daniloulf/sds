@@ -1,0 +1,39 @@
+body {
+	font-family: 'Newsreader', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Truculenta', sans-serif;
+}
+
+header h1 {
+	font-size: 5em;
+	text-align:center;
+}
+
+select, label, option {
+	font-family: 'Truculenta', sans-serif;
+	font-size: 2em;
+}
+
+select {
+	width: 100%;
+}
+
+#show {
+	
+	text-align: center;
+	font-size: 5em;
+	
+}
+
+.btncontainer {
+	text-align: center;
+}
+
+footer p {
+	font-family: 'Truculenta', sans-serif;
+	font-size: 0.7 em !important;
+	text-align: center;
+}
+
